@@ -17,6 +17,18 @@ public class PooRfd {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("HOLA MUNDO");
+        
+        //Hay que generar los objetos de las clases anteriores
+        Usuario x=new Usuario();
+        x.altura=1.65f;
+        x.peso=56;
+        Imc algo=new Imc();
+        algo.u=x;
+        //Se calcula el IMC a traves de su objeto
+        System.out.println(algo.calcular());
+        
+                
+        
     }
     
 }
