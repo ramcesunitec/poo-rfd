@@ -16,7 +16,7 @@ public class PooRfd {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        system.out.println("HOLA MUNDO");
+        System.out.println("HOLA MUNDO");
     }
     
 }
