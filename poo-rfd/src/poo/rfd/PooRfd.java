@@ -20,8 +20,8 @@ public class PooRfd {
         
         //Hay que generar los objetos de las clases anteriores
         Usuario x=new Usuario();
-        x.altura=1.65f;
-        x.peso=56;
+        x.setAltura(1.68f);
+        x.setPeso(80);
         Imc algo=new Imc();
         algo.u=x;
         //Se calcula el IMC a traves de su objeto
