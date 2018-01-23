@@ -13,5 +13,9 @@ public class Usuario {
     private float peso;
     private float altura;
     
-    public void setPeso
+    public void setPeso//ajustarPeso(){
+    //implementacion o logica del metodo
+        //argumentos o parametros
+    }
+    
 }
