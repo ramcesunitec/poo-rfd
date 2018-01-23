@@ -10,7 +10,8 @@ package poo.rfd;
  * @author T-102
  */
 public class Usuario {
-    float peso;
-    float altura;
+    private float peso;
+    private float altura;
     
+    public void setPeso
 }
