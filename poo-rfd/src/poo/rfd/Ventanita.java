@@ -5,6 +5,9 @@
  */
 package poo.rfd;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author T-102
@@ -116,20 +119,28 @@ public class Ventanita extends javax.swing.JFrame {
     }//GEN-LAST:event_textoAlturaActionPerformed
 
     private void BotonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCalcularActionPerformed
-        // TODO add your handling code here:
-        //Pedir el valor al textoPeso y altura
-        float peso= Float.parseFloat(textoPeso.getText());
-        float altura=Float.parseFloat(textoAltura.getText());
-        
-        //Creamos identidad
-        Usuario u=new Usuario();
-        u.setAltura(altura);
-        u.setPeso(peso);
-        
-        Imc x=new Imc();
-        x.u=u;
-        //En el Imc que se llama X invamos el metodo calcular
-        etiquetaResultado.setText(x.calcular());
+        try {
+            // TODO add your handling code here:
+            //Pedir el valor al textoPeso y altura
+            float peso= Float.parseFloat(textoPeso.getText());
+            float altura=Float.parseFloat(textoAltura.getText());
+            
+            //Creamos identidad
+            Usuario u=new Usuario();
+            
+            //Los validamos
+            ValidarCantidades.validarValorNegativo(altura);
+            ValidarCantidades.validarValorNegativo(peso);
+            u.setAltura(altura);
+            u.setPeso(peso);
+            
+            Imc x=new Imc();
+            x.u=u;
+            //En el Imc que se llama X invamos el metodo calcular
+            etiquetaResultado.setText(x.calcular());
+        } catch (NumeroNegativoException ex) {
+            etiquetaResultado.setText(ex.getMessage());
+        }
         
     }//GEN-LAST:event_BotonCalcularActionPerformed
 
