@@ -11,7 +11,7 @@ public class AplicacionCuestionario {
 
     public static void main(String[] args) {
         //1.Generamos las opciones 
-        Opcion op1=new Opcion("Grasa", false);
+        Opcion op1=new Opcion("Grasa", true);
         Opcion op2=new Opcion("Contaminacion", false);
         Opcion op3=new Opcion("Sol", false);
         Opcion op4=new Opcion("Azucar", true);
