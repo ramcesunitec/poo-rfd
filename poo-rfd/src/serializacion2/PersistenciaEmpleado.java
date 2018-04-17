@@ -8,6 +8,7 @@ package serializacion2;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
@@ -48,10 +49,10 @@ public class PersistenciaEmpleado {
     
     //Ponemos un mensajito 
         System.out.println("Objeto guardado con exito ");
-}catch (Exception e){
+}catch (IOException e){
         System.out.println(e.getMessage());
 }
-
+    
     }    
     
     
